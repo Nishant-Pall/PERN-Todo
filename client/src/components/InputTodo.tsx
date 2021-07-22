@@ -1,7 +1,8 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState, useRef, useEffect } from "react";
 
 const InputTodo = () => {
     const [description, setDescription] = useState("");
+    const inputRef = useRef<any>();
 
     const onSubmitForm = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -19,12 +20,16 @@ const InputTodo = () => {
             console.error(err.message);
         }
     };
+    useEffect(() => {
+        inputRef.current.focus();
+    }, []);
 
     return (
         <Fragment>
             <h1 className="text-center mt-5">Input todo</h1>
             <form className="d-flex mt-5" onSubmit={onSubmitForm}>
                 <input
+                    ref={inputRef}
                     type="text"
                     className="form-control"
                     value={description}
