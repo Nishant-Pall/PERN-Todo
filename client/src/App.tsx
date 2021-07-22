@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import InputTodo from "./components/InputTodo";
 import ListTodo from "./components/ListTodo";
 
-const App = () => {
+const App: React.FC = () => {
     return (
         <Fragment>
             <div className="container">

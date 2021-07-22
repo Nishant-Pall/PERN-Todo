@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { Fragment, useState, useRef, useEffect } from "react";
 
-const InputTodo = () => {
+const InputTodo: React.FC = () => {
     const [description, setDescription] = useState("");
     const inputRef = useRef<any>();
 

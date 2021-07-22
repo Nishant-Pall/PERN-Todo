@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { Fragment, useEffect, useState } from "react";
 
-const ListTodo = () => {
+const ListTodo: React.FC = () => {
     interface todoVariable {
         todo_id: number;
         description: string;
