@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { Fragment, useEffect, useState } from "react";
 
 const ListTodo = () => {

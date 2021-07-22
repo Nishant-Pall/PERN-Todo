@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { Fragment, useState, useRef, useEffect } from "react";
 
 const InputTodo = () => {
