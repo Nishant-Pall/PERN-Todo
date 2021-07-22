@@ -3,7 +3,7 @@ import React, { Fragment, useState } from "react";
 const InputTodo = () => {
     const [description, setDescription] = useState("");
 
-    const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    const onSubmitForm = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         try {
             const body = { description };
@@ -13,7 +13,8 @@ const InputTodo = () => {
                 body: JSON.stringify(body),
             });
 
-            console.log(response);
+            // to refresh after submission
+            window.location.href = "/";
         } catch (err: any) {
             console.error(err.message);
         }
@@ -22,7 +23,7 @@ const InputTodo = () => {
     return (
         <Fragment>
             <h1 className="text-center mt-5">Input todo</h1>
-            <form className="d-flex mt-5" onSubmit={onSubmit}>
+            <form className="d-flex mt-5" onSubmit={onSubmitForm}>
                 <input
                     type="text"
                     className="form-control"
