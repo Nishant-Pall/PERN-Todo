@@ -38,8 +38,6 @@ const ListTodo = () => {
         }
     };
 
-    console.log(todos);
-
     useEffect(() => {
         getTodos();
     }, []);
