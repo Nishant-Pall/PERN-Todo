@@ -27,7 +27,7 @@ const InputTodo: React.FC = () => {
 
     return (
         <Fragment>
-            <h1 className="text-center mt-5">Input todo</h1>
+            <h1 className="text-center mt-5">Scuffed Todo</h1>
             <form className="d-flex mt-5" onSubmit={onSubmitForm}>
                 <input
                     ref={inputRef}
