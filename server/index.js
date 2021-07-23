@@ -1,7 +1,7 @@
 import express, { json } from "express"
 const app = express()
 import cors from "cors"
-import { query } from "./db"
+import query from './db.js';
 
 //middleware for interacting with client
 app.use(cors())

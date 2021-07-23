@@ -1,7 +1,8 @@
-const Pool = require("pg").Pool
+// const Pool = require("pg").Pool
+import pg from 'pg';
+const { Pool } = pg
 
-
-const pool = new Pool({
+const query = new Pool({
 	user: "prhyme",
 	password: "root",
 	host: "localhost",
@@ -9,4 +10,4 @@ const pool = new Pool({
 	database: "perntodo"
 })
 
-module.exports = pool
+export default query
