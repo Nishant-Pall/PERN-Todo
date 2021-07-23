@@ -39,29 +39,29 @@ const ListTodo: React.FC = () => {
         }
     };
 
-    const editTodo = async (todoId: number) => {
-        let newTodo = prompt("Enter the new todo");
+    // const editTodo = async (todoId: number) => {
+    //     let newTodo = prompt("Enter the new todo");
 
-        if (newTodo) {
-            try {
-                const editTodo = await fetch(
-                    `http://localhost:5000/todos/${todoId}`,
-                    {
-                        method: "PUT",
-                        headers: {
-                            "Content-type": "application/json",
-                        },
-                        body: JSON.stringify({
-                            description: newTodo,
-                        }),
-                    }
-                );
-                window.location.href = "/";
-            } catch (err: any) {
-                console.error(err.message);
-            }
-        }
-    };
+    //     if (newTodo) {
+    //         try {
+    //             const editTodo = await fetch(
+    //                 `http://localhost:5000/todos/${todoId}`,
+    //                 {
+    //                     method: "PUT",
+    //                     headers: {
+    //                         "Content-type": "application/json",
+    //                     },
+    //                     body: JSON.stringify({
+    //                         description: newTodo,
+    //                     }),
+    //                 }
+    //             );
+    //             window.location.href = "/";
+    //         } catch (err: any) {
+    //             console.error(err.message);
+    //         }
+    //     }
+    // };
 
     useEffect(() => {
         getTodos();
@@ -91,7 +91,7 @@ const ListTodo: React.FC = () => {
                             <td>
                                 <button
                                     className="btn btn-success"
-                                    onClick={() => editTodo(todo.todo_id)}
+                                    // onClick={() => editTodo(todo.todo_id)}
                                 >
                                     Edit
                                 </button>
