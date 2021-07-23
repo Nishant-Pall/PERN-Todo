@@ -2,7 +2,7 @@
 import pg from 'pg';
 const { Pool } = pg
 
-const query = new Pool({
+const pool = new Pool({
 	user: "prhyme",
 	password: "root",
 	host: "localhost",
@@ -10,4 +10,4 @@ const query = new Pool({
 	database: "perntodo"
 })
 
-export default query
+export default pool
