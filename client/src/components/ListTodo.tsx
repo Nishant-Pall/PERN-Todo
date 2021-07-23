@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { Fragment, useEffect, useState } from "react";
+import { EditTodo } from "./EditTodo";
 
 const ListTodo: React.FC = () => {
     interface todoVariable {
@@ -89,12 +90,13 @@ const ListTodo: React.FC = () => {
                         <tr key={todo.todo_id}>
                             <td>{todo.description}</td>
                             <td>
-                                <button
+                                {/* <button
                                     className="btn btn-success"
-                                    // onClick={() => editTodo(todo.todo_id)}
+                                    onClick={() => editTodo(todo.todo_id)}
                                 >
                                     Edit
-                                </button>
+                                </button> */}
+                                <EditTodo todo={todo} />
                             </td>
                             <td>
                                 <button
